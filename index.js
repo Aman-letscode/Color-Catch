@@ -93,7 +93,7 @@ function checked(index){
             increase++;//Incrementing the score if right
             score.innerHTML = increase;//Displaying the score
         }
-        if(div!=col){
+        else{
             increase--;//Incrementing the score if right
             score.innerHTML = increase;//Displaying the score
         }
