@@ -80,7 +80,7 @@ function countdown(){
         n=0;
         increase = 0;
         sec=60;
-        alert("Game Over");
+        alert("Game Over!!\nScore:"+score);
         time.innerHTML = "1:00";
     }
     return sec;
