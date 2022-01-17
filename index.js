@@ -16,6 +16,7 @@ function Start(){
     increase =0;
     score.innerHTML = 0;
 
+   
     n=1;//condition to start and end 
     Begin();
 }
@@ -23,7 +24,7 @@ function Start(){
 
 //Setting the timer and running it 
 //Give a random color from the array
-let array = ["blue", "green", "yellow", "red", "voilet", "orange"];
+let array = ["blue", "green", "yellow", "red", "cyan", "orange"];
 
 
 function color_eleminate(){
@@ -93,15 +94,17 @@ function checked(index){
             increase++;//Incrementing the score if right
             score.innerHTML = increase;//Displaying the score
         }
-        else{
-            increase--;//Incrementing the score if right
-            score.innerHTML = increase;//Displaying the score
-        }
+         else if (div!=col){
+             increase--;//Decrementing the score if right
+             score.innerHTML = increase;//Displaying the score
+         }
     }
 }
 
 function Begin(){
 if(n==1){
+    col = colorsel.options[colorsel.selectedIndex].value;//value of selected color
+
     set();//changing the colors of grid blocks
     countdown();    
 }
