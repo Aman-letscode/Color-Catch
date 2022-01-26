@@ -15,7 +15,7 @@ function Start(){
     //Initialize the score
     increase =0;
     score.innerHTML = 0;
-
+col = colorsel.options[colorsel.selectedIndex].value;//value of selected color
    
     n=1;//condition to start and end 
     Begin();
@@ -103,7 +103,7 @@ function checked(index){
 
 function Begin(){
 if(n==1){
-    col = colorsel.options[colorsel.selectedIndex].value;//value of selected color
+    
 
     set();//changing the colors of grid blocks
     countdown();    
