@@ -9,13 +9,14 @@ let score = document.getElementById("score")//Score div
 let n=0;//for start stop condition
 let increase = 0;//For score increment
 let sec = 60;//for timer of 60 sec
-
+let temp = "blue"//for not eliminating all colour or to store previous colour
 //Start the game 
 function Start(){
     //Initialize the score
     increase =0;
     score.innerHTML = 0;
 col = colorsel.options[colorsel.selectedIndex].value;//value of selected color
+      
    
     n=1;//condition to start and end 
     Begin();
@@ -28,11 +29,17 @@ let array = ["blue", "green", "yellow", "red", "cyan", "orange"];
 
 
 function color_eleminate(){
+    if (col!=temp){
+          array.push(temp);
+          temp=col;
+    }
     for(let index = 0; index<6;index++){
         if(array[index]===col){
+           k=array[index] 
             array.splice(index,1);
 
         }
+        
     }
     console.log(array);
     return array;
